@@ -1,0 +1,40 @@
+Design pattern: Simple Factory
+	* A simple factory returns a Manufacturer instance.
+
+Design pattern: Strategy
+	* The drawing by the VideoCard class is implemented using the Strategy desing pattern. Drawing style depends on the passed drawing strategy. It's abstracted by using an interface called IDrawingStrategy (may change it if I have time to re-refactor :)).
+
+Design pattern: Template Method
+	* The Squaring algorithm of the class CPU is defined in the abstract class Cpu, but the specific implementations are left to the classes which inherit it - Cpu32 and Cpu64.
+
+Design pattern: Abstract factory
+	* Its implementation is the production of computers via a factory, which accepts a manufacturer. It then asks each manufacturer to produce computers of their own kind.
+
+Design pattern: Composite
+	* Implemented for the StorageProvider, HardDrive and Raid classes. The HardDrive is the "Leaf" class, and the Raid class is the "Composite class", as described in the pattern.
+
+Design pattern: Mediator
+	* The implementation of the interface IMotherboard - the class Motherboard. It mediates the connection between CPU, VideoCard and RAM.
+
+Found bottlenecks:
+	* CPU Random number generation. The Random class has its own way of generating a number between given values.
+	* Calculating the value of a squared number in the CPU class
+
+Single responsibility principle
+	* Each class and method handles a single task and comes up with a result. No class has too many lines of code, knows about too many classes or has too many methods and responsibilities.
+
+Open/closed principle
+	* In the CPU random number generation, thanks to the Template design pattern - classes that inherit from Cpu can override and alter the execution of the algorithm - open for extension
+  * Strategy pattern allows for chaning everything about outputting by the video card - from color to output destination - console, file, etc.
+  * 
+
+Liskov substitution principle
+	* Any of the succcessors to Cpu - Cpu32 and Cpu64, can be interchangable without having obsolete methods or fields.
+
+Interface segregation principle
+	* IMotherboard was segregated to IRamOperator and IVideocardOperator because these are responsibilities delegated to different components and provides better structure.
+
+Dependency inversion principle
+	* The VideoCard class accepts its dependency - the DrawingStrategy, from outside - this allows for better testing and interchanging strategies.
+  * I use constructors with inversion of control for every class, especially in the StorageProvider implementation of the Composite pattern
+  * I use Interfaces and abstract classes wherever possible
