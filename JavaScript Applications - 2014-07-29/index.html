@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Crowd-Share</title>
+    <link href="styles/style.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <div id="chat-window">
+        </div>
+
+        <div id="input-wrapper">
+            <div id="msg-wrapper">
+                <label for="msg-title-input">Your Message Title:</label>
+                <br />
+                <input id="msg-title-input" type="text" />
+
+                <label for="msg-input">Your Message:</label>
+                <br />
+                <input id="msg-input" type="text" />
+
+                <button id="sendmsg-butt">Send</button>
+                <br />
+                <button id="logout-butt">Log out</button>
+            </div>
+
+            <div id="login-wrapper">
+                <label for="username-input">Your Nickname:</label>
+                <br />
+                <input id="username-input" type="text" />
+                <br />
+                <label for="pass-input">Your Password:</label>
+                <br />
+                <input id="pass-input" type="password" />
+                <button id="login-butt">Login</button>
+                <br />
+                <button id="register-butt">Register</button>
+            </div>
+        </div>
+
+        <div id="announcements">
+        </div>
+
+        <div id="filter-container">
+            <label>Filter by user</label>
+            <input id="filter-user-input" type="text" />
+            <br />
+            <label>Filter by pattern</label>
+            <input id="filter-pattern-input" type="text" value="" />
+            <br />
+            <label>Post per page: </label>
+            <input id="post-count-input" type="text" value="" />
+            <br />
+            <button id="filter-butt">Apply Filter</button>
+        </div>
+
+        <div id="sortby-container">
+            <select id="sortby-select">
+                <option value="date">Sort by date</option>
+                <option value="title">Sort by title</option>
+            </select>
+            <br />
+            <select id="asc-inp">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </select>
+            <br />
+            <button id="sort-butt">Sort</button>
+        </div>
+
+        <div id="page-nav">
+            <button id="prev-page-butt">Prev</button>
+            <button id="next-page-butt">Next</button>
+        </div>
+
+        <!--{{#each this}} 
+        <div class="post-container"> 
+            <span class="post-id">{{id}}</span>
+            <span class="post-title">{{title}}</span>
+            <span class="post-date">{{postDate}}</span>
+            <span class="post-userid">{{user.id}}</span>
+            <span class="post-username">{{user.name}}</span>
+        </div> 
+        {{/each}}-->
+
+        <script src="../libs/require.js" data-main="app"></script>
+    </div>
+</body>
+</html>

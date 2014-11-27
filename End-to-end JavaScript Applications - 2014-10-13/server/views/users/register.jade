@@ -1,0 +1,60 @@
+extends ../shared/layout
+
+
+// add required to all inputs
+
+block main-content
+    form(method="post")
+        label(for="firstname") Frst Name
+        input(id="firstname" class="form-control" type="text" name="firstname" placeholder="First Name")
+        br
+        label(for="lastname") Last Name
+        input(id="lastname" class="form-control" type="text" name="lastname" placeholder="First Name")
+        br
+        label(for="phone") Phone Number
+        input(id="phone" class="form-control" type="text" name="phone" placeholder="Phone Number")
+        br
+        label(for="email") Email
+        input(id="email" class="form-control" type="email" name="email" placeholder="Email")
+        br
+        label(for="initiatives") Initiatives
+        select(id="initiatives" multiple="multiple" class="form-control" name="initiatives" placeholder="Initiatives")
+            option(value='00') Software Academy Started 2010
+            option(value='01') Software Academy Started 2011
+            option(value='02') Software Academy Started 2012
+            option(value='03') Software Academy Started 2013
+            option(value='10') Algo Academy Started 2010
+            option(value='11') Algo Academy Started 2011
+            option(value='12') Algo Academy Started 2012
+            option(value='13') Algo Academy Started 2013
+            option(value='20') School Academy Started 2010
+            option(value='21') School Academy Started 2011
+            option(value='22') School Academy Started 2012
+            option(value='23') School Academy Started 2013
+            option(value='30') Kids Academy Started 2010
+            option(value='31') Kids Academy Started 2011
+            option(value='32') Kids Academy Started 2012
+            option(value='33') Kids Academy Started 2013
+        br
+        label(for="fb") Facebook
+        input(id="fb" class="form-control" type="text" name="fb" placeholder="Facebook")
+        br
+        label(for="google") Google+
+        input(id="google" class="form-control" type="text" name="google" placeholder="Google+")
+        br
+        label(for="linkedin") LinkedIn
+        input(id="linkedin" class="form-control" type="text" name="linkedin" placeholder="LinkedIn")
+        br
+        label(for="twitter") Twitter
+        input(id="twitter" class="form-control" type="text" name="twitter" placeholder="Twitter")
+        br
+        label(for="username") Username
+        input(id="username" class="form-control" type="text" name="username" placeholder="Username")
+        br
+        label(for="password") Password
+        input(id="password" class="form-control" type="password" name="password" placeholder="Password")
+        br
+        label(for="confirm-password") Confirm Password
+        input(id="confirm-password" class="form-control" type="password" name="confirmPassword" placeholder="Confirm password")
+        br
+        input(type="submit" class="btn btn-lg" value="Register")

@@ -1,0 +1,1 @@
+Seeding test data is an option in the config module. Just set it to "true".

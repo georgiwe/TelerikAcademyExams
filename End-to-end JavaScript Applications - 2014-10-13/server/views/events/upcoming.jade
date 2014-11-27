@@ -1,0 +1,103 @@
+extends ../shared/layout
+block main-content
+  .container
+    h2 Events from category "Academy Initiative"
+    br
+    br
+    table(class='table table-striped table-hover')
+        thead
+          tr
+            th Title
+            th Description
+            th Location
+            th Creator
+            th Date
+        tbody
+          each event in events.academyInitiatives
+            tr
+              td
+                a(href='events/#{event._id}') #{event.title}
+              td
+                | #{event.desc}
+              td
+                | #{event.location}
+              td
+                | #{event.creatorName}
+              td 
+                | #{event.date}
+  .container
+    h2 Events from category "Study arrangement"
+    br
+    br
+    table(class='table table-striped table-hover')
+        thead
+          tr
+            th Title
+            th Description
+            th Location
+            th Creator
+        tbody
+          each event in events.studyArrangements
+            tr
+              td
+                a(href='events/#{event._id}') #{event.title}
+              td
+                | #{event.desc}
+              td
+                | #{event.location}
+              td
+                | #{event.creatorName}
+              td 
+                | #{event.date}
+                
+  .container
+    h2 Events from category "Free time"
+    br
+    br
+    table(class='table table-striped table-hover')
+        thead
+          tr
+            th Title
+            th Description
+            th Location
+            th Creator
+            th Date
+        tbody
+          each event in events.freeTime
+            tr
+              td
+                a(href='events/#{event._id}') #{event.title}
+              td
+                | #{event.desc}
+              td                
+                | #{event.location}
+              td
+                | #{event.creatorName}
+              td 
+                | #{event.date}
+
+
+
+
+  //- each category in categories
+  //-   .container
+  //-   h2 Events from category #{category}
+  //-   table(class='table table-striped table-hover')
+  //-       thead
+  //-         tr
+  //-           th Title
+  //-           th Description
+  //-           th Location
+  //-           th Creator
+  //-       tbody
+  //-         each event in category.events.academyInitiatives
+  //-           tr
+  //-             td
+  //-               a #{event.title}
+  //-             td
+  //-               a #{event.desc}
+  //-             td
+  //-               a #{event.location}
+  //-             td
+  //-               a #{event.creatorName}
+

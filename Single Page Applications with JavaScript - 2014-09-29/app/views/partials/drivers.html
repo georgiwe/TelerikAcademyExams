@@ -1,0 +1,32 @@
+<div class="container">
+    <h2 class="text-center">Drivers</h2>
+
+    <div ng-show="isLoggedIn" class="container">
+        <div class="container col-sm-5">
+            <div class="form-group">
+                <div class="input-group">
+                    <input ng-model="username" type="text" class="form-control">
+
+                    <span class="input-group-btn">
+                    <button ng-click="filter()" class="btn btn-default" type="button">Filter</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div clas="container">
+            <ul class="pager col-md-3 pull-right">
+                <li ng-click="prev()" class="previous"><a href="">← Prev</a></li>
+                <input ng-model="page" class="col-sm-2 form-control" type="number">
+                <li ng-click="next()" class="next"><a href="">Next →</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div ng-hide="noResults" class="container">
+        <table table-drivers ></table>
+    </div>
+    <div ng-show="noResults" class="container">
+        <h3 class="text-center">No Results</h3>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="jumbotron">
+
+        <form ng-submit="create(createTripForm)" name="createTripForm" class="form-horizontal">
+            <fieldset>
+                <legend>Create New Trip</legend>
+
+                <div class="form-group">
+                    <label class="col-md-2">From</label>
+                    <select required="required" name="from" id="fromcity" class="coll-sm-6 form-control" ng-model="newTrip.from" ng-options="city for city in cities">
+                        <option value="-1">-- Select City --</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2">To</label>
+                    <select required="required" name="to" id="tocity" class="coll-sm-6 form-control" ng-model="newTrip.to" ng-options="city for city in cities">
+                        <option value="-1">-- Select City --</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2">Available Seats</label>
+                    <input required="required" min="1" class="form-control" type="number" name="seats" id="numofseats" ng-model="newTrip.seats" >
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-7">Departure time (format depends on your local settings - test for it)</label>
+                    <input required="required" min="{{now | date:'yyyy-MM-dd'}}" class="form-control" type="datetime" name="departuretime" id="departure" ng-model="newTrip.departure" >
+                    </select>
+                </div>
+
+                <div class="pull-right">
+                    <button type="submit" ng-disabled="createTripForm.$invalid" class="btn btn-primary">
+                        Create
+                    </button>
+                    <a href="#/" class="btn btn-primary">Cancel</a>
+                </div>
+
+            </fieldset>
+        </form>
+
+    </div>
+</div>

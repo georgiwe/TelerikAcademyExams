@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="well">
+        <form name="signUpForm" class="form-horizontal" novalidate>
+            <fieldset>
+                <legend>Create New User</legend>
+                <div class="form-group" ng-class="{ 'has-error' : signUpForm.mail.$invalid && !signUpForm.$pristine }">
+                    <label for="email" class="col-md-2 control-label">E-mail</label>
+                    <div class="col-md-10">
+                        <input id="email" name="mail" type="email" placeholder="E-mail" ng-model="user.email" required="required" class="form-control"/>
+                    </div>
+                </div>
+                <div class="form-group" ng-class="{ 'has-error' : signUpForm.pass.$invalid && !signUpForm.$pristine }">
+                    <label for="password" class="col-md-2 control-label">Password</label>
+                    <div class="col-md-10">
+                        <input id="password" name="pass" type="password" placeholder="Password" ng-model="user.password" required="required" class="form-control"/>
+                    </div>
+                </div>
+
+                <div class="form-group" ng-class="{ 'has-error' : signUpForm.confirmpassword.$invalid && !signUpForm.$pristine }">
+                    <label for="confirmation" class="col-md-2 control-label">Confirm Password</label>
+                    <div class="col-md-10">
+                        <input id="confirmation" name="confirmpassword" type="password" placeholder="Username" ng-model="user.confirmPassword" required="required" class="form-control"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="isdriver" class="col-md-2 control-label">Driver</label>
+                    <div class="checkbox">
+                        <input type="checkbox" class="col-md-1" id="isdriver" ng-model="user.isDriver">
+                    </div>
+                </div>
+
+                <div class="form-group" ng-show="user.isDriver" ng-class="{'formRequire' : user.isDriver }" ng-class="{ 'has-error' : signUpForm.nameofcar.$invalid && !signUpForm.$pristine }">
+                    <label for="carname" class="col-md-2 control-label">Car Name</label>
+                    <div class="col-md-10">
+                        <input type="text" id="carname" ng-minlength="2" name="nameofcar" ng-model="user.carName" ng-required="user.isDriver">
+                    </div>
+                </div>
+
+                <div class="pull-right">
+                    <button ng-click="signup(user, signUpForm)" ng-disabled="signUpForm.$invalid" class="btn btn-primary">
+                        Create
+                    </button>
+                    <a href="#/" class="btn btn-primary">Cancel</a>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

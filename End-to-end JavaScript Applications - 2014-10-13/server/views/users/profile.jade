@@ -1,0 +1,24 @@
+extends ../shared/layout
+block main-content
+  form(method="post")
+    img(src='#{profileImage}')
+    br
+    label(for="img") Image Url
+    input(id="img" class="form-control" type="text" name="imageUrl" placeholder="Image URL" value="#{profileImage}")
+    br
+    label(for="phone") Phone Number
+    input(id="phone" class="form-control" type="text" name="phoneNumber" placeholder="Phone Number" value="#{phoneNumber}")
+    br
+    label(for="fb") Facebook
+    input(id="fb" class="form-control" type="text" name="fb" placeholder="Facebook" value="#{fb}")
+    br
+    label(for="google") Google+
+    input(id="google" class="form-control" type="text" name="google" placeholder="Google+" value="#{google}")
+    br
+    label(for="linkedin") LinkedIn
+    input(id="linkedin" class="form-control" type="text" name="linkedin" placeholder="LinkedIn" value="#{linkedin}")
+    br
+    label(for="twitter") Twitter
+    input(id="twitter" class="form-control" type="text" name="twitter" placeholder="Twitter" value="#{twitter}")
+    br
+    input(type="submit" class="btn btn-lg" value="Update")

@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="text-center">Welcome to Trip Exchange</h1>
+        <h2 class="text-center">Find your way home!</h2>
+    </div>
+
+    <table class="table" id="home-table">
+        <thead>
+            <tr>
+                <th>Trips</th>
+                <th>Finished trips</th>
+                <th>Users</th>
+                <th>Drivers</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{stats.trips}}</td>
+                <td>{{stats.finishedTrips}}</td>
+                <td>{{stats.users}}</td>
+                <td>{{stats.drivers}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="container">
+        <h3 class="text-center">Latest Trips</h3>
+    </div>
+    <table table-trips ></table>
+    <div class="container">
+        <h3 class="text-center">Latest Drivers</h3>
+    </div>
+    <table table-drivers ></table>
+</div>

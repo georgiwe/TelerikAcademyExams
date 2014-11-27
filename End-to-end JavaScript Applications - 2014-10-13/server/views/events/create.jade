@@ -1,0 +1,48 @@
+extends ../shared/layout
+block main-content
+  form(method="post")
+        label(for="title") Title
+        input(id="title" class="form-control" type="text" name="title" placeholder="Title")
+          
+        br
+        label(for="description") Description
+        input(id="description" class="form-control" type="text" name="desc" placeholder="Description")
+
+        br
+        label(for="description") Category
+        select(id="category" class="form-control" name="category" placeholder="Category")
+          each cat in categories
+            option(value='#{cat}')
+              | #{cat}
+
+        br
+        label(for="type") Type
+        select(id='type', class='form-control' name='type')
+          each restriction in restrictions
+            option(value='#{restriction}')
+              | #{restriction}
+
+        br
+        label(for='initiative-rest') Initiative restriction
+        select(id='initiative-rest' class='form-control' name='initrest')
+          each initiative in initiatives
+            option(value='#{initiative}')
+              | #{initiative}
+
+        br
+        label(for='season-rest') Season restriction
+        select(id='season-rest' class='form-control' name='seasonrest')
+          each season in seasons
+            option(value='#{season}')
+              | #{season}
+
+        br
+        label(for="location") Location
+        input(id="location" class="form-control" type="text" name="location" placeholder="Location")
+
+        br
+        label(for="date") Date (mm/dd/yyyy)
+        input(id="date" class="form-control" type="datetime" name="date" placeholder="Date")
+
+        br
+        input(type="submit" class="btn btn-lg" value="Create")

@@ -1,0 +1,15 @@
+<div class="container">
+    <h2>{{driver.name}}</h2>
+
+    <div class="row">
+        <span  class="md-col-12">Upcoming trips:</span> <strong>{{driver.numberOfUpcomingTrips}}</strong>
+        <span  class="md-col-12">Total trips:</span> <strong>{{driver.numberOfTotalTrips}}</strong>
+
+        <label>Only my trips</label>
+        <input type="checkbox" ng-model="onlyMine">
+        <label>Only driver trips</label>
+        <input type="checkbox" ng-model="onlyDriverTrips">
+    </div>
+
+    <table table-trips ></table>
+</div>
