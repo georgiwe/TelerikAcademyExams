@@ -1,0 +1,8 @@
+﻿.vote-btn {
+    display: inline-block;
+}
+
+.vote-counter {
+    display: block;
+    margin-left: 18px;
+}
