@@ -1,0 +1,15 @@
+Connection string for "Company" database: .\SQLEXPRESS
+Connection string for "Cars" database: .\SQLEXPRESS
+
+Relationships for "Company" database: 
+  (first-table : second-table - type of relationship)
+  
+  Employees: Departments - One-to-many (each employee has only one department)
+  Employees: Projects - Many-to-many, via the EmployeesProjects medaitor table (one employee can have many projects and each project has many employees, working on it)
+  Employees: Reports - Many-to-one (Each employee has many chek-in/outs in the report table, and each report is oncerning only one employee)
+  Employees: Employees - Many-to-one (Many employees have the same manager, one manager has many employees)
+  
+  All tables have a CHECK constraint for minimum length, where needed
+  
+Relationships for "Cars" database: (first-table : second-table - type of relationship)
+Query files: (file location in solution)
